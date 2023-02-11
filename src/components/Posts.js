@@ -18,6 +18,14 @@ export default function Posts() {
       nomeCurtidas: "adorable_animals",
       qtdeCurtidas: 99159,
     },
+    {
+      imagemUsuario: "./assets/img/smallcutecats.svg",
+      nome: "gatinho fofinho",
+      imagemPost: "./assets/img/pato.jpg",
+      altImg: "pato",
+      nomeCurtidas: "driven",
+      qtdeCurtidas: 999999999,
+    },
   ];
 
   return (

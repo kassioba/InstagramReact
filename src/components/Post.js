@@ -18,6 +18,14 @@ export default function Post(props) {
     }
   }
 
+  function curtirImagem() {
+    if (curtida === "heart-outline") {
+      setCurtida("heart");
+      setQtdeDeCurtidas(qtdeCurtidas + 1);
+      setVermelho("vermelho");
+    }
+  }
+
   function salvarPost() {
     if (salvar === "bookmark-outline") {
       setSalvar("bookmark");
@@ -39,7 +47,12 @@ export default function Post(props) {
       </div>
 
       <div class="conteudo">
-        <img data-test="post-image" src={props.imagemPost} alt={props.altImg} />
+        <img
+          data-test="post-image"
+          onClick={curtirImagem}
+          src={props.imagemPost}
+          alt={props.altImg}
+        />
       </div>
 
       <div class="fundo">
