@@ -1,3 +1,5 @@
+import Story from "./Story";
+
 export default function Stories() {
   const dados = [
     { imagem: "assets/img/9gag.svg", nome: "9gag" },
@@ -15,13 +17,8 @@ export default function Stories() {
 
   return (
     <div class="stories">
-      {dados.map((dado) => (
-        <div class="story">
-          <div class="imagem">
-            <img src={dado.imagem} alt={dado.nome} />
-          </div>
-          <div class="usuario">{dado.nome}</div>
-        </div>
+      {dados.map((data) => (
+        <Story imagem={data.imagem} nome={data.nome} />
       ))}
 
       <div class="setinha">

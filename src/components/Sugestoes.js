@@ -1,3 +1,5 @@
+import Sugestao from "./Sugestao";
+
 export default function Sugestoes() {
   const sugestoes = [
     {
@@ -40,17 +42,12 @@ export default function Sugestoes() {
       </div>
 
       {sugestoes.map((dados) => (
-        <div class="sugestao">
-          <div class="usuario">
-            <img src={dados.img} alt={dados.imgAlt} />
-            <div class="texto">
-              <div class="nome">{dados.nome}</div>
-              <div class="razao">{dados.razão}</div>
-            </div>
-          </div>
-
-          <div class="seguir">Seguir</div>
-        </div>
+        <Sugestao
+          img={dados.img}
+          imgAlt={dados.imgAlt}
+          nome={dados.nome}
+          razão={dados.razão}
+        />
       ))}
     </div>
   );
